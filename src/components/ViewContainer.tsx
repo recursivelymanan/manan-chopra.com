@@ -1,11 +1,10 @@
 import type React from "react";
 
-import type { PageName } from "../../types/types";
-
-import HomeView from "../views/HomeView/HomeView";
-import PortfolioView from "../views/PortfolioView/PortfolioView";
-import ResumeView from "../views/ResumeView/ResumeView";
-import ContactView from "../views/ContactView/ContactView";
+import type { PageName } from "../types/types";
+import HomeView from "./views/HomeView";
+import PortfolioView from "./views/PortfolioView";
+import ResumeView from "./views/ResumeView";
+import ContactView from "./views/ContactView";
 
 interface ViewContainerProps {
   page: PageName;
