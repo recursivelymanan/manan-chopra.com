@@ -13,7 +13,7 @@ interface ViewContainerProps {
 const ViewContainer: React.FC<ViewContainerProps> = ({ page }) => {
   switch (page) {
     case "Home":
-      return <HomeView />;
+      return <HomeView inHeader={false} />;
     case "Portfolio":
       return <PortfolioView />;
     case "Resume":
