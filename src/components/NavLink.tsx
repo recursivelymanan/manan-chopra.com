@@ -1,10 +1,7 @@
 import React, { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 
 import { useMeasure } from "@react-hookz/web";
-import { Flex } from "@chakra-ui/react";
-
-import type { PageName } from "../types/types";
 
 import styles from "../styles/NavLink.module.css";
 
@@ -12,14 +9,14 @@ interface NavLinkProps {
   title: string;
   icon: React.ReactNode;
   onClick: () => void;
-  activeView: PageName;
+  isActive: boolean;
 }
 
 const NavLink: React.FC<NavLinkProps> = ({
   title,
   icon,
   onClick,
-  activeView,
+  isActive,
 }) => {
   const [isHover, setIsHover] = useState<boolean>(false);
   const [measurements, ref] = useMeasure<HTMLDivElement>();
@@ -34,11 +31,7 @@ const NavLink: React.FC<NavLinkProps> = ({
 
   return (
     <motion.div
-      className={
-        activeView === title
-          ? `${styles.activeButton} ${styles.button}`
-          : styles.button
-      }
+      className={styles.button}
       animate={{ width: isHover ? width + 0 : width }}
       onClick={onClick}
       onHoverStart={() => setIsHover((prev) => !prev)}
@@ -48,12 +41,11 @@ const NavLink: React.FC<NavLinkProps> = ({
       <motion.div
         ref={ref}
         className={styles.absolute}
-        initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
         transition={{ duration: 0.4 }}
       >
-        {isHover ? (
+        {isHover || isActive ? (
           <div className={styles.flexRow}>
             {icon}
             <p className={styles.text}>{title}</p>
