@@ -11,13 +11,14 @@ export type Skill =
   | "React-Native"
   | "Scientific Writing"
   | "Nextflow"
+  | "Snakemake"
   | "Docker"
   | "AWS";
 
 export type PortfolioEntry = {
   title: string;
-  type: PortfolioEntryType;
-  date: Date;
+  type: PortfolioEntryType[];
+  date?: Date;
   description: string;
   skills: Skill[];
 };

@@ -5,7 +5,6 @@ import ViewContainer from "./components/ViewContainer";
 import NavBar from "./components/NavBar";
 
 import styles from "./styles/MainPage.module.css";
-import { motion, AnimatePresence } from "framer-motion";
 
 const MainPage = () => {
   const [view, setView] = useState<PageName>("Home");
