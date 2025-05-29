@@ -7,6 +7,7 @@ export const PortfolioEntryList: PortfolioEntry[] = [
     description:
       "Nextflow pipeline for processing of raw bulk RNAseq files with Docker containerization",
     skills: ["Nextflow", "Docker", "AWS"],
+    repoLink: "https://github.com/recursivelymanan/NGS-bulk-pipeline",
   },
   {
     title: "manan-chopra.com",
@@ -14,6 +15,7 @@ export const PortfolioEntryList: PortfolioEntry[] = [
     description:
       "Portfolio website to display my projects, publications, and experience.",
     skills: ["React", "Typescript"],
+    repoLink: "https://github.com/recursivelymanan/manan-chopra.com",
   },
   {
     title:
@@ -29,5 +31,15 @@ export const PortfolioEntryList: PortfolioEntry[] = [
       "Scientific Writing",
       "Snakemake",
     ],
+    repoLink: "https://github.com/WahlinLab/Human_RGC-iN",
+    prodLink: "https://www.nature.com/articles/s41536-023-00327-x",
+  },
+  {
+    title: "Genedex",
+    type: ["Project"],
+    description: "Mobile app for quick gene lookup.",
+    skills: ["React-Native", "Typescript"],
+    repoLink: "https://github.com/recursivelymanan/Genedex",
+    prodLink: "apple.co/3Z4EcHV",
   },
 ];

@@ -25,7 +25,7 @@ const HomeView: React.FC<HomeViewProps> = ({ inHeader }) => {
       () => {
         setIndex((prev) => (prev + 1) % scrollText.length);
       },
-      inHeader ? 4000 : 2500
+      inHeader ? 4000 : 3000
     );
     return () => clearInterval(interval);
   }, []);

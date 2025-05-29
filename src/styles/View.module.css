@@ -43,6 +43,7 @@
   font-size: 40px;
   color: gray;
   font-family: "Lexend";
+  padding-bottom: 20px;
 }
 
 .subtitleInHeader {
@@ -55,6 +56,13 @@
   font-size: 80px;
   font-family: "Lexend";
   font-weight: bold;
+  padding: 15px 30px 15px 30px;
+
+  background-color: #f2feff;
+  border-radius: 70px;
+  outline: 2px solid black;
+  width: fit-content;
+  align-self: center;
 }
 
 .scrollTextInHeader {

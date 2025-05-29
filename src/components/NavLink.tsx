@@ -32,10 +32,10 @@ const NavLink: React.FC<NavLinkProps> = ({
   return (
     <motion.div
       className={styles.button}
-      animate={{ width: isHover ? width + 0 : width }}
+      animate={{ width: width }}
       onClick={onClick}
-      onHoverStart={() => setIsHover((prev) => !prev)}
-      onHoverEnd={() => setIsHover((prev) => !prev)}
+      onHoverStart={() => setIsHover(true)}
+      onHoverEnd={() => setIsHover(false)}
       transition={transition}
     >
       <motion.div
