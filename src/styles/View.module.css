@@ -1,3 +1,34 @@
 .view {
-  flex: 1;
+  display: flex;
+  position: relative;
+  margin: 10px;
+  height: 60vh;
+}
+
+.titleContainer {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-self: center;
+  justify-content: center;
+  text-align: center;
+
+  width: 80vw;
+}
+
+.title {
+  font-size: 60px;
+  padding-bottom: 30px;
+  font-family: "Lexend";
+}
+
+.subtitle {
+  font-size: 40px;
+  color: gray;
+  font-family: "Lexend";
+}
+
+.scrollText {
+  font-size: 80px;
+  font-family: "Lexend";
 }
