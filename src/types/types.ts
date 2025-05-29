@@ -15,19 +15,21 @@ export type Skill =
   | "Nextflow"
   | "Snakemake"
   | "Docker"
-  | "AWS";
+  | "AWS"
+  | "Bash";
 
 export const Skills: Skill[] = [
   "Python",
-  "R",
   "Jupyter Notebook",
-  "Typescript",
-  "React",
-  "Scientific Writing",
+  "R",
+  "Bash",
   "Nextflow",
   "Snakemake",
+  "Typescript",
+  "React",
   "Docker",
   "AWS",
+  "Scientific Writing",
 ];
 
 export type PortfolioEntry = {

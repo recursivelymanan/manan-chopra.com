@@ -9,8 +9,8 @@
 
   cursor: pointer;
 
-  margin: 20px;
-  min-height: 60px;
+  margin: 25px;
+  height: 60px;
 
   background-color: #f2feff;
   border-radius: 50px;
@@ -66,4 +66,7 @@
 
 .absolute {
   position: absolute;
+}
+
+.icon {
 }

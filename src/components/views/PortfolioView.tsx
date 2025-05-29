@@ -6,13 +6,14 @@ import SkillsFilter from "../SkillsFilter";
 
 const PortfolioView = () => {
   const [displayedPortfolioEntries, setDisplayedPortfolioEntries] =
-    useState<PortfolioEntry[]>(PortfolioEntryList);
+    useState<string>("hello");
 
   return (
     <div>
       <SkillsFilter
         setDisplayedPortfolioEntries={setDisplayedPortfolioEntries}
       />
+      <span>{displayedPortfolioEntries}</span>
     </div>
   );
 };

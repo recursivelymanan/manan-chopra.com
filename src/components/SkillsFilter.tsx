@@ -8,9 +8,7 @@ import { Skills, type PortfolioEntry } from "@/types/types";
 import SkillIcon from "./SkillIcon";
 
 interface SkillsFilterProps {
-  setDisplayedPortfolioEntries: React.Dispatch<
-    React.SetStateAction<PortfolioEntry[]>
-  >;
+  setDisplayedPortfolioEntries: React.Dispatch<React.SetStateAction<string>>;
 }
 
 const SkillsFilter: React.FC<SkillsFilterProps> = ({
@@ -58,7 +56,11 @@ const SkillsFilter: React.FC<SkillsFilterProps> = ({
               transition={{ delay: 0.4 }}
             >
               {Skills.map((skill) => (
-                <SkillIcon key={skill} iconName={skill} />
+                <SkillIcon
+                  key={skill}
+                  iconName={skill}
+                  setDisplayedPortfolioEntries={setDisplayedPortfolioEntries}
+                />
               ))}
               <IoCloseCircle
                 size={30}

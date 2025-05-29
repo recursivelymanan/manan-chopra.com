@@ -25,3 +25,6 @@ dist-ssr
 
 # Windows
 *:Zone.Identifier
+
+# dev
+todo.txt

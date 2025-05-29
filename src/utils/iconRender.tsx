@@ -10,10 +10,11 @@ import PythonLogo from "@/assets/images/python.svg";
 import JupyterLogo from "@/assets/images/jupyter.svg";
 import RLogo from "@/assets/images/Rlogo.svg";
 import AWSLogo from "@/assets/images/aws-color.svg";
+import BashLogo from "@/assets/images/bash.svg";
 
 import type { Skill } from "@/types/types";
 
-const ICON_DIMENSION = 40;
+const ICON_DIMENSION = 35;
 
 export function renderIcon(iconName: Skill): React.ReactNode {
   switch (iconName) {
@@ -31,7 +32,7 @@ export function renderIcon(iconName: Skill): React.ReactNode {
       return <SiTypescript size={ICON_DIMENSION} color="#327ac7" />;
     case "React":
     case "React-Native":
-      return <RiReactjsFill size={ICON_DIMENSION} color="#58c3db" />;
+      return <RiReactjsFill size={ICON_DIMENSION + 10} color="#58c3db" />;
     case "Scientific Writing":
       return <IoDocumentText size={ICON_DIMENSION} />;
     case "Nextflow":
@@ -54,7 +55,19 @@ export function renderIcon(iconName: Skill): React.ReactNode {
       return <FaDocker size={ICON_DIMENSION} color="#1c62ed" />;
     case "AWS":
       return (
-        <img src={AWSLogo} width={ICON_DIMENSION} height={ICON_DIMENSION} />
+        <img
+          src={AWSLogo}
+          width={ICON_DIMENSION + 5}
+          height={ICON_DIMENSION + 5}
+        />
+      );
+    case "Bash":
+      return (
+        <img
+          src={BashLogo}
+          width={ICON_DIMENSION + 10}
+          height={ICON_DIMENSION + 10}
+        />
       );
   }
 }
