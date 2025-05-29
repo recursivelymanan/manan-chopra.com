@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 
 import styles from "./../../styles/View.module.css";
 
@@ -45,20 +45,22 @@ const HomeView: React.FC<HomeViewProps> = ({ inHeader }) => {
         <span className={inHeader ? styles.subtitleInHeader : styles.subtitle}>
           I am a{"AEIOU".includes(scrollText[index].charAt(0)) ? "n" : ""}
         </span>
-        <motion.span
-          key={index}
-          className={inHeader ? styles.scrollTextInHeader : styles.scrollText}
-          initial={{ x: 100, opacity: 0 }}
-          animate={{ x: 0, opacity: 1 }}
-          exit={{ x: -100, opacity: 0 }}
-          transition={{
-            type: "tween",
-            duration: 0.4,
-            ease: "easeInOut",
-          }}
-        >
-          {scrollText[index]}
-        </motion.span>
+        <AnimatePresence mode="wait">
+          <motion.span
+            key={index}
+            className={inHeader ? styles.scrollTextInHeader : styles.scrollText}
+            initial={{ x: 100, opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            exit={{ x: -100, opacity: 0 }}
+            transition={{
+              type: "tween",
+              duration: 0.4,
+              ease: "easeInOut",
+            }}
+          >
+            {scrollText[index]}
+          </motion.span>
+        </AnimatePresence>
       </div>
     </div>
   );
