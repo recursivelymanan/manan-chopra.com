@@ -9,7 +9,7 @@ interface NavLinkProps {
   title: string;
   icon: React.ReactNode;
   onClick: () => void;
-  isActive: boolean;
+  isActive?: boolean;
 }
 
 const NavLink: React.FC<NavLinkProps> = ({

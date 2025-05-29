@@ -1,5 +1,5 @@
 const PortfolioView = () => {
-  return <p>Portfolio View</p>;
+  return <p></p>;
 };
 
 export default PortfolioView;
