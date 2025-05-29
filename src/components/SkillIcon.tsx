@@ -7,14 +7,11 @@ import styles from "@/styles/PortfolioView.module.css";
 
 interface SkillIconProps {
   iconName: Skill;
-  setDisplayedPortfolioEntries: React.Dispatch<React.SetStateAction<string>>;
+  onClick: () => void;
 }
 
-const SkillIcon: React.FC<SkillIconProps> = ({
-  iconName,
-  setDisplayedPortfolioEntries,
-}) => {
-  const icon: React.ReactNode = renderIcon(iconName);
+const SkillIcon: React.FC<SkillIconProps> = ({ iconName, onClick }) => {
+  const icon: React.ReactNode = renderIcon(iconName, 35);
   const [hover, setHover] = useState<boolean>(false);
 
   return (
@@ -23,7 +20,7 @@ const SkillIcon: React.FC<SkillIconProps> = ({
       animate={{ scale: hover ? 1.4 : 1 }}
       onHoverStart={() => setHover(true)}
       onHoverEnd={() => setHover(false)}
-      onClick={() => setDisplayedPortfolioEntries(iconName)}
+      onClick={onClick}
     >
       {icon}
     </motion.div>

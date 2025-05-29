@@ -1,3 +1,9 @@
+.portfolioViewContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .inlineContainer {
   display: flex;
   flex-direction: row;
@@ -15,6 +21,11 @@
   background-color: #f2feff;
   border-radius: 50px;
   outline: 2px solid black;
+}
+
+.filterOuterContainer {
+  display: flex;
+  justify-content: center;
 }
 
 .filterContainer {
@@ -68,5 +79,14 @@
   position: absolute;
 }
 
-.icon {
+.cardGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+
+  width: 80vw;
+  justify-items: center;
+  padding: 20px;
+
+  margin-top: 30px;
+  gap: 30px;
 }

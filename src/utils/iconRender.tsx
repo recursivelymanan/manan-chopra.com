@@ -14,59 +14,75 @@ import BashLogo from "@/assets/images/bash.svg";
 
 import type { Skill } from "@/types/types";
 
-const ICON_DIMENSION = 35;
-
-export function renderIcon(iconName: Skill): React.ReactNode {
+export function renderIcon(iconName: Skill, iconSize: number): React.ReactNode {
   switch (iconName) {
     case "Python":
       return (
-        <img src={PythonLogo} width={ICON_DIMENSION} height={ICON_DIMENSION} />
+        <img
+          src={PythonLogo}
+          width={iconSize}
+          height={iconSize}
+          title="Python"
+        />
       );
     case "R":
-      return <img src={RLogo} width={ICON_DIMENSION} height={ICON_DIMENSION} />;
+      return <img src={RLogo} width={iconSize} height={iconSize} title="R" />;
     case "Jupyter Notebook":
       return (
-        <img src={JupyterLogo} width={ICON_DIMENSION} height={ICON_DIMENSION} />
+        <img
+          src={JupyterLogo}
+          width={iconSize}
+          height={iconSize}
+          title="Jupyter Notebook"
+        />
       );
     case "Typescript":
-      return <SiTypescript size={ICON_DIMENSION} color="#327ac7" />;
+      return (
+        <SiTypescript size={iconSize} color="#327ac7" title="Typescript" />
+      );
     case "React":
     case "React-Native":
-      return <RiReactjsFill size={ICON_DIMENSION + 10} color="#58c3db" />;
+      return (
+        <RiReactjsFill size={iconSize + 10} color="#58c3db" title="React" />
+      );
     case "Scientific Writing":
-      return <IoDocumentText size={ICON_DIMENSION} />;
+      return <IoDocumentText size={iconSize} title="Scientific Writing" />;
     case "Nextflow":
       return (
         <img
           src={NextflowLogo}
-          width={ICON_DIMENSION}
-          height={ICON_DIMENSION}
+          width={iconSize - 3}
+          height={iconSize - 3}
+          title="Nextflow"
         />
       );
     case "Snakemake":
       return (
         <img
           src={SnakemakeLogo}
-          width={ICON_DIMENSION}
-          height={ICON_DIMENSION}
+          width={iconSize}
+          height={iconSize}
+          title="Snakemake"
         />
       );
     case "Docker":
-      return <FaDocker size={ICON_DIMENSION} color="#1c62ed" />;
+      return <FaDocker size={iconSize + 3} color="#1c62ed" title="Docker" />;
     case "AWS":
       return (
         <img
           src={AWSLogo}
-          width={ICON_DIMENSION + 5}
-          height={ICON_DIMENSION + 5}
+          width={iconSize + 5}
+          height={iconSize + 5}
+          title="AWS"
         />
       );
     case "Bash":
       return (
         <img
           src={BashLogo}
-          width={ICON_DIMENSION + 10}
-          height={ICON_DIMENSION + 10}
+          width={iconSize + 10}
+          height={iconSize + 10}
+          title="Bash"
         />
       );
   }

@@ -1,7 +1,5 @@
 export type PageName = "Home" | "Portfolio" | "Resume" | "Contact";
 
-export type PortfolioEntryType = "Publication" | "Project" | "Presentation";
-
 export type StatusType = "in development" | "live" | "published";
 
 export type Skill =
@@ -34,7 +32,7 @@ export const Skills: Skill[] = [
 
 export type PortfolioEntry = {
   title: string;
-  type: PortfolioEntryType[];
+  type: string[];
   date?: Date;
   description: string;
   skills: Skill[];

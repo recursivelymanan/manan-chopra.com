@@ -1,19 +1,19 @@
 import { useState } from "react";
 
-import { PortfolioEntryList } from "@/content/PortfoilioEntries";
-import type { PortfolioEntry } from "@/types/types";
+import type { Skill } from "@/types/types";
 import SkillsFilter from "../SkillsFilter";
+import { renderEntries } from "@/utils/filterEntries";
+import styles from "@/styles/PortfolioView.module.css";
 
 const PortfolioView = () => {
-  const [displayedPortfolioEntries, setDisplayedPortfolioEntries] =
-    useState<string>("hello");
+  const [displayFilter, setDisplayFilter] = useState<Skill | "">("");
 
   return (
-    <div>
-      <SkillsFilter
-        setDisplayedPortfolioEntries={setDisplayedPortfolioEntries}
-      />
-      <span>{displayedPortfolioEntries}</span>
+    <div className={styles.portfoilioViewContainer}>
+      {/* <div className={styles.filterOuterContainer}>
+        <SkillsFilter setDisplayFilter={setDisplayFilter} />
+      </div> */}
+      <div className={styles.cardGrid}>{renderEntries(displayFilter)}</div>
     </div>
   );
 };

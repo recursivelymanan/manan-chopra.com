@@ -4,16 +4,14 @@ import { useMeasure } from "@react-hookz/web";
 import { IoCloseCircle } from "react-icons/io5";
 
 import styles from "@/styles/PortfolioView.module.css";
-import { Skills, type PortfolioEntry } from "@/types/types";
+import { Skills, type Skill } from "@/types/types";
 import SkillIcon from "./SkillIcon";
 
 interface SkillsFilterProps {
-  setDisplayedPortfolioEntries: React.Dispatch<React.SetStateAction<string>>;
+  setDisplayFilter: React.Dispatch<React.SetStateAction<Skill | "">>;
 }
 
-const SkillsFilter: React.FC<SkillsFilterProps> = ({
-  setDisplayedPortfolioEntries,
-}) => {
+const SkillsFilter: React.FC<SkillsFilterProps> = ({ setDisplayFilter }) => {
   const [showIcons, setShowIcons] = useState<boolean>(false);
   const [closeButtonHover, setCloseButtonHover] = useState<boolean>(false);
   const [measure, ref] = useMeasure<HTMLDivElement>();
@@ -59,12 +57,15 @@ const SkillsFilter: React.FC<SkillsFilterProps> = ({
                 <SkillIcon
                   key={skill}
                   iconName={skill}
-                  setDisplayedPortfolioEntries={setDisplayedPortfolioEntries}
+                  onClick={() => setDisplayFilter(skill)}
                 />
               ))}
               <IoCloseCircle
                 size={30}
-                onClick={() => setShowIcons(false)}
+                onClick={() => {
+                  setShowIcons(false);
+                  setDisplayFilter("");
+                }}
                 color={closeButtonHover ? "#f58495" : "black"}
                 onMouseEnter={() => setCloseButtonHover(true)}
                 onMouseLeave={() => setCloseButtonHover(false)}
