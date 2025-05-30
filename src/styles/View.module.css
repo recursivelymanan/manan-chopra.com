@@ -5,13 +5,6 @@
   height: 60vh;
 }
 
-.viewContainerInHeader {
-  display: flex;
-  position: relative;
-  margin: 10px;
-  width: 30vw;
-}
-
 .titleContainer {
   display: flex;
   position: relative;
@@ -21,16 +14,6 @@
   text-align: center;
 
   width: 80vw;
-}
-
-.titleContainerInHeader {
-  display: flex;
-  position: relative;
-  flex-direction: row;
-  justify-content: center;
-  text-align: center;
-  align-items: center;
-  width: fit-content;
 }
 
 .title {
@@ -46,12 +29,6 @@
   padding-bottom: 20px;
 }
 
-.subtitleInHeader {
-  font-size: 20px;
-  padding-right: 20px;
-  font-family: "Lexend";
-}
-
 .scrollText {
   font-size: 80px;
   font-family: "Lexend";
@@ -65,7 +42,3 @@
   align-self: center;
 }
 
-.scrollTextInHeader {
-  font-size: 35px;
-  font-family: "Lexend";
-}

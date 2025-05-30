@@ -1,6 +1,4 @@
-export type PageName = "Home" | "Portfolio" | "Resume" | "Contact";
-
-export type StatusType = "in development" | "live" | "published";
+export type PageName = "Home" | "Portfolio";
 
 export type Skill =
   | "Python"
@@ -38,5 +36,4 @@ export type PortfolioEntry = {
   skills: Skill[];
   repoLink?: string;
   prodLink?: string;
-  status?: "live";
 };
