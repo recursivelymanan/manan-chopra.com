@@ -2,8 +2,8 @@ import type React from "react";
 import { FaHome, FaBriefcase, FaGithub, FaLinkedin } from "react-icons/fa";
 import { FaGoogleScholar } from "react-icons/fa6";
 import { IoDocumentText } from "react-icons/io5";
-import { RiContactsBook2Fill } from "react-icons/ri";
 
+import Resume from "@/assets/resume/chopra_manan_resume.pdf";
 import type { PageName } from "../types/types";
 import NavLink from "./NavLink";
 
@@ -29,19 +29,21 @@ const NavBar: React.FC<NavBarProps> = ({ view, setView }) => {
         isActive={view === "Portfolio"}
         icon={<FaBriefcase className={styles.icon} />}
       />
-      <NavLink
-        title={"Resume"}
-        onClick={() => setView("Resume")}
-        isActive={view === "Resume"}
-        icon={<IoDocumentText className={styles.icon} />}
-      />
-      <NavLink
+      <div className={styles.divider}></div>
+      <a href={Resume} download="chopra_resume.pdf">
+        <NavLink
+          title={"Download Resume"}
+          icon={<IoDocumentText className={styles.icon} />}
+        />
+      </a>
+      
+      {/* <NavLink
         title={"Contact"}
         onClick={() => setView("Contact")}
         isActive={view === "Contact"}
         icon={<RiContactsBook2Fill className={styles.icon} />}
-      />
-      <div className={styles.divider}></div>
+      /> */}
+
       <NavLink
         title={"GitHub"}
         onClick={() =>

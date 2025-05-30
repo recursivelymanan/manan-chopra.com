@@ -8,7 +8,7 @@ import styles from "../styles/NavLink.module.css";
 interface NavLinkProps {
   title: string;
   icon: React.ReactNode;
-  onClick: () => void;
+  onClick?: () => void;
   isActive?: boolean;
 }
 
