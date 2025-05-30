@@ -36,13 +36,6 @@ const NavBar: React.FC<NavBarProps> = ({ view, setView }) => {
           icon={<IoDocumentText className={styles.icon} />}
         />
       </a>
-      
-      {/* <NavLink
-        title={"Contact"}
-        onClick={() => setView("Contact")}
-        isActive={view === "Contact"}
-        icon={<RiContactsBook2Fill className={styles.icon} />}
-      /> */}
 
       <NavLink
         title={"GitHub"}
