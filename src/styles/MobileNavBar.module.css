@@ -22,6 +22,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  width: 50vw;
 
   gap: 15px;
 
@@ -47,4 +48,6 @@
   font-size: clamp(1rem, 5vw, 2rem);
   font-family: "Lexend";
   cursor: pointer;
+  width: 200px;
+  text-align: center;
 }
