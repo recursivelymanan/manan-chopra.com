@@ -13,7 +13,7 @@ const ViewContainer: React.FC<ViewContainerProps> = ({ page }) => {
   function renderView(): React.ReactNode {
     switch (page) {
       case "Home":
-        return <HomeView inHeader={false} />;
+        return <HomeView />;
       case "Portfolio":
         return <PortfolioView />;
     }
