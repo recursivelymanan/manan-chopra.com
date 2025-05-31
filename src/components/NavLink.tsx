@@ -8,6 +8,7 @@ import styles from "../styles/NavLink.module.css";
 interface NavLinkProps {
   title: string;
   icon: React.ReactNode;
+  mobile: boolean;
   onClick?: () => void;
   isActive?: boolean;
 }
@@ -15,6 +16,7 @@ interface NavLinkProps {
 const NavLink: React.FC<NavLinkProps> = ({
   title,
   icon,
+  mobile,
   onClick,
   isActive,
 }) => {
@@ -29,7 +31,14 @@ const NavLink: React.FC<NavLinkProps> = ({
     duration: 0.05,
   };
 
-  return (
+  return mobile ? (
+    <div className={styles.mobileButton} onClick={onClick}>
+      <div className={styles.mobileRow}>
+        {icon}
+        <p className={styles.text}>{title}</p>
+      </div>
+    </div>
+  ) : (
     <motion.div
       className={styles.button}
       animate={{ width: width }}

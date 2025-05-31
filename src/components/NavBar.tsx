@@ -1,4 +1,4 @@
-import type React from "react";
+import React from "react";
 import { FaHome, FaBriefcase, FaGithub, FaLinkedin } from "react-icons/fa";
 import { FaGoogleScholar } from "react-icons/fa6";
 import { IoDocumentText } from "react-icons/io5";
@@ -20,12 +20,14 @@ const NavBar: React.FC<NavBarProps> = ({ view, setView }) => {
       <NavLink
         title={"Home"}
         onClick={() => setView("Home")}
+        mobile={false}
         isActive={view === "Home"}
         icon={<FaHome className={styles.icon} />}
       />
       <NavLink
         title={"Portfolio"}
         onClick={() => setView("Portfolio")}
+        mobile={false}
         isActive={view === "Portfolio"}
         icon={<FaBriefcase className={styles.icon} />}
       />
@@ -34,6 +36,7 @@ const NavBar: React.FC<NavBarProps> = ({ view, setView }) => {
         <NavLink
           title={"Download Resume"}
           icon={<IoDocumentText className={styles.icon} />}
+          mobile={false}
         />
       </a>
 
@@ -43,6 +46,7 @@ const NavBar: React.FC<NavBarProps> = ({ view, setView }) => {
           window.open("https://github.com/recursivelymanan", "_blank")
         }
         icon={<FaGithub className={styles.icon} />}
+        mobile={false}
       />
       <NavLink
         title={"LinkedIn"}
@@ -50,6 +54,7 @@ const NavBar: React.FC<NavBarProps> = ({ view, setView }) => {
           window.open("https://linkedin.com/in/manan-chopra22", "_blank")
         }
         icon={<FaLinkedin className={styles.icon} />}
+        mobile={false}
       />
       <NavLink
         title={"Google Scholar"}
@@ -59,6 +64,7 @@ const NavBar: React.FC<NavBarProps> = ({ view, setView }) => {
             "_blank"
           )
         }
+        mobile={false}
         icon={<FaGoogleScholar className={styles.icon} />}
       />
     </div>
