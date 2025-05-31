@@ -1,4 +1,5 @@
 .portfolioViewContainer {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -81,10 +82,14 @@
 
 .cardGrid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(clamp(250px, 40vw, 400px), 1fr)
+  );
 
   width: 80vw;
   justify-items: center;
+  align-self: center;
   padding: 20px;
 
   margin-top: 20px;

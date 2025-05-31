@@ -17,23 +17,26 @@
 }
 
 .title {
-  font-size: 60px;
-  padding-bottom: 30px;
+  font-size: clamp(1.5rem, 5vw, 4rem);
+  padding-bottom: clamp(0.5rem, 2vw, 1rem);
   font-family: "Lexend";
 }
 
 .subtitle {
-  font-size: 40px;
+  font-size: clamp(1.5rem, 4vw, 3rem);
   color: gray;
   font-family: "Lexend";
-  padding-bottom: 20px;
+  padding-bottom: clamp(0.5rem, 5vw, 3rem);
 }
 
 .scrollText {
-  font-size: 80px;
+  font-size: clamp(1.5rem, 5vw, 5rem);
   font-family: "Lexend";
   font-weight: bold;
-  padding: 15px 30px 15px 30px;
+  padding-top: clamp(0.75rem, 1.5vw, 1.25rem);
+  padding-bottom: clamp(0.75rem, 1.5vw, 1.25rem);
+  padding-left: clamp(1rem, 3vw, 2rem);
+  padding-right: clamp(1rem, 3vw, 2rem);
 
   background-color: #f2feff;
   border-radius: 70px;
@@ -41,4 +44,3 @@
   width: fit-content;
   align-self: center;
 }
-
