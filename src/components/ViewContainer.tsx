@@ -5,6 +5,8 @@ import type { PageName } from "../types/types";
 import HomeView from "./views/HomeView";
 import PortfolioView from "./views/PortfolioView";
 
+import styles from "../styles/ViewContainer.module.css";
+
 interface ViewContainerProps {
   page: PageName;
 }
@@ -13,9 +15,17 @@ const ViewContainer: React.FC<ViewContainerProps> = ({ page }) => {
   function renderView(): React.ReactNode {
     switch (page) {
       case "Home":
-        return <HomeView />;
+        return (
+          <div className={styles.viewContainer}>
+            <HomeView />
+          </div>
+        );
       case "Portfolio":
-        return <PortfolioView />;
+        return (
+          <div className={styles.viewContainer}>
+            <PortfolioView />
+          </div>
+        );
     }
   }
 
