@@ -27,11 +27,30 @@ export const PortfolioEntryList: PortfolioEntry[] = [
     repoLink: "https://github.com/recursivelymanan/NGS-bulk-pipeline",
   },
   {
-    title: "RGC-iN Poster",
+    title:
+      "Validation of Organoid-Derived Photoreceptors through Single-Cell RNAseq",
+    type: ["MS Thesis"],
+    description:
+      "Single-cell RNAseq analysis of induced human photoreceptor cells sorted from whole retinal organoids. Goal of the thesis was to validate the photoreceptor identity of these in vitro cells.",
+    skills: ["Python", "Jupyter Notebook", "Bash", "Scientific Writing"],
+    repoLink:
+      "https://github.com/recursivelymanan/Validation-of-Human-Organoid-Derived-PRs",
+  },
+  {
+    title: "RGC-iN Single-Cell RNAseq Poster",
+    type: ["ARVO Presentation & Publication"],
+    description:
+      "Poster presentation on single-cell RNA sequencing analysis of induced retinal ganglion cells.",
+    skills: ["Python", "Jupyter Notebook", "Bash", "Scientific Writing"],
+    prodLink: "https://iovs.arvojournals.org/article.aspx?articleid=2798699",
+  },
+
+  {
+    title: "RGC-iN RNAseq Poster ",
     type: ["ARVO Presentation & Publication"],
     description:
       "Poster presentation on early transcriptional dynamics of induced retinal ganglion cells.",
-    skills: ["Python", "Jupyter Notebook", "Scientific Writing"],
+    skills: ["Python", "Jupyter Notebook", "Bash", "Scientific Writing"],
     prodLink: "https://iovs.arvojournals.org/article.aspx?articleid=2786985",
   },
   {
@@ -44,15 +63,7 @@ export const PortfolioEntryList: PortfolioEntry[] = [
       "https://github.com/WahlinLab/Retinal-Organoid-ATAC-RNAseq_Cells_2022",
     prodLink: "https://www.mdpi.com/2073-4409/11/21/3412",
   },
-  {
-    title: "Validation of Organoid-Derived Photoreceptors",
-    type: ["MS Thesis"],
-    description:
-      "Single-cell RNAseq analysis of induced human photoreceptor cells sorted from whole retinal organoids. Goal of the thesis was to validate the photoreceptor identity of these in vitro cells.",
-    skills: ["Python", "Jupyter Notebook", "Bash", "Scientific Writing"],
-    repoLink:
-      "https://github.com/recursivelymanan/Validation-of-Human-Organoid-Derived-PRs",
-  },
+
   {
     title: "Muller Glia Review Paper",
     type: ["Stem Cell Research Publication"],
